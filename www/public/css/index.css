@@ -26,6 +26,7 @@ content{
 	bottom: 1.25rem;
 	left: 0;
 	right: 0;
+	overflow: auto;
 }
 footer{
 	position: fixed;

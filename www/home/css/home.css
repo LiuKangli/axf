@@ -16,16 +16,67 @@ body{
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	background-color: #fff;
 }
 .btns .htn{
-	width: 33%;
+	width: 25%;
 	margin: 0.3125rem 0;
 	text-align: center;
 	background-color: #fff;
+	font-size: 0.46875rem;
 }
 .btns .htn img{
 	width: 100%;
+}
+.reffer{
+	width: 100%;
+	height: 3.90625rem;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+	margin: 0.3125rem 0;
+}
+.reffer .ref{
+	flex-grow: 1;
+}
+.ref1{
+	background: url(../img/cms_113619_1483090657.jpg)no-repeat center center;
+	background-size: contain;
+}
+.ref2{
+	background: url(../img/cms_118464_1483090726.jpg)no-repeat center center;
+	background-size: contain;
+}
+.ref3{
+	background: url(../img/2016121318392062.jpg@90Q.jpg)no-repeat center center;
+	background-size: contain;
+}
+.sales{
+	width: 100%;
+	height: 3.90625rem;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.sales .sale {
+	width: 50%;
+}
+.sal1 {
+	background: url(../img/2016122610531910.jpg@90Q.jpg)no-repeat center center;
+	background-size: contain;
+}
+.sal2 {
+	background: url(../img/2016112918160610.jpg@90Q.jpg)no-repeat center center;
+	background-size: contain;
+}
+.sal3 {
+	background: url(../img/2016092417350939.png@90Q.png)no-repeat center center;
+	background-size: contain;
+}
+.sal4 {
+	background: url(../img/201609241914489.jpg@90Q.jpg)no-repeat center center;
+	background-size: contain;
 }
 .milk{
 	width: 97%;
@@ -117,3 +168,12 @@ body{
  	color: red;
  	border-color: #eee;
  }
+.fruit{
+	margin-top: 0.3125rem;
+}
+.fruit i:before{
+	background-color: red;
+}
+.fruit h3{
+	color: red;
+}

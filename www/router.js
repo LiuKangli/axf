@@ -11,8 +11,8 @@ define(['underscore','backbone'],function(_,backbone){
 			console.log('首页');
 			require(['text!home/home.html','home/js/home'],function(home,homeData){
 				homeData.bannerData();
-			$('content').html(home);	
-			
+				$('#content').html(home);	
+				
 			});
 		},
 		superMarket:function(){
