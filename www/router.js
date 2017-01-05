@@ -9,7 +9,6 @@ define(['underscore','backbone'],function(_,backbone){
 		},
 		home:function(){
 			console.log('首页');
-			$('body header').css('display','block');
 			require(['text!home/home.html','home/js/home'],function(home,homeData){
 				homeData.bannerData();
 				$('#content').html(home);
@@ -30,11 +29,14 @@ define(['underscore','backbone'],function(_,backbone){
 			console.log('我的');
 			require(['text!myself/myself.html','myself/js/myself'],function(myself,myselfJs){
 				$('#content').html(myself);
-				$('body header').css('display','none');
 			});
 		},
 		reserve:function(){
 			console.log('预定');
+			require(['text!reserve/reserve.html','reserve/js/reserve'],function(reserve,reserveJs){
+				reserveJs.request();
+				$('#content').html(reserve);
+			});
 		},
 		initialize:function(){
 			location.hash = 'home';

@@ -1,0 +1,124 @@
+nav{
+	height: 1.25rem;
+	background-color: rgba(246,246,246,1);
+	border-bottom: 1px solid #eee;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 100;
+}
+nav h3{
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.25rem;
+	font-size: 0.390625rem;
+}
+.all{
+	width: 100%;
+	overflow: auto;
+	margin-top: 1.25rem;
+	/*background-color: red;*/
+}
+.lists{
+	width: 100%;
+	height: 1.5625rem;
+	margin-top: 0.234375rem;
+	border-top: 1px solid #999;
+}
+.list1,.list2{
+	border-bottom: 1px solid #ccc;
+}
+.list1,.list2{
+	width: 100%;
+	height: 0.78125rem;
+}
+.list1 ul{
+	display: flex;
+	justify-content: space-around;
+}
+.list2 ul{
+	display: flex;
+	justify-content: space-around;
+}
+.lists li{
+	font-size: 0.3125rem;
+	line-height: 0.78125rem;
+}
+.products {
+	width: 100%;
+	margin-top: 0.234375rem;
+}
+.products .title{
+	display: block;
+	float: left;
+	width: 90%;
+	height: 0.625rem;
+	/*margin-left: 0.234375rem;*/
+	font-size: 0.46875rem;
+	line-height:0.625rem;
+	text-indent: 0.234375rem;
+	padding: 0.234375rem 0;
+	padding-left: 0.234375rem;
+}
+.title i:before{
+	content: '';
+	display: block;
+	float: left;
+	width: 0.15625rem;
+	height: 0.625rem;
+	background-color: lightskyblue;
+}
+.productList {
+	width: 100%;
+	overflow: hidden;
+	/*background-color: red;*/
+}
+.productList li{
+	border-bottom: 1px solid #ccc;
+}
+.productList li .li{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.3125rem 0;
+	position: relative;
+}
+.li img{
+	width: 2.34375rem;
+	float: left;
+}
+.li .name,.kg,.price{
+	float: left;
+	width: 70%;
+	height: 0.625rem;
+	font-size: 0.390625rem;
+	line-height: 0.625rem;
+	text-align: left;
+	text-indent: 0.234375rem;
+}
+.li .price{
+	color: red;
+}
+.li .price .rmb:before{
+	content: '￥';
+	float: left;
+	font-size: 0.1875rem;
+	color: red;
+	font-weight: 500;
+}
+.li .oldPrice{
+	text-decoration: line-through;
+	font-size: 0.1875rem;
+	color: #999;
+}
+.li .addToCar{
+	width: 1.25rem;
+	height: 1.25rem;
+	position: absolute;
+	right: 0.234375rem;
+	bottom: 0.46875rem;
+	background-color: red;
+	border-radius: 50%;
+	background:#f00 url(../img/8_03.png)no-repeat center center;
+	background-size: contain;
+}
