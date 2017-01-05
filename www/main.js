@@ -6,9 +6,10 @@ require.config({
 		'underscore':'public/lib/underscore.min',
 		'router':'./router',
 		'text':'public/lib/text',
-		'swiper':'public/lib/swiper-3.4.1.min'
+		'swiper':'public/lib/swiper-3.4.1.min',
+		'template':'public/lib/template'
 	}
 });
-require(['jquery','flexible','router','text'],function($){
+require(['jquery','flexible','router','text','template'],function($){
 	
 });

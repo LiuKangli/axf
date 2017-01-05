@@ -9,6 +9,11 @@ define(['underscore','backbone'],function(_,backbone){
 		},
 		home:function(){
 			console.log('首页');
+			require(['text!home/home.html','home/js/home'],function(home,homeData){
+				homeData.bannerData();
+			$('content').html(home);	
+			
+			});
 		},
 		superMarket:function(){
 			console.log('超市');
