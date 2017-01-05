@@ -1,0 +1,17 @@
+.userInfo{
+	width: 100%;
+	overflow: hidden;
+	background-color: #ffd600;
+}
+.userInfo img {
+	display: block;
+	width: 1.5625rem;
+	height: 1.5625rem;
+	border-radius: 50%;
+	float: left;
+}
+.userInfo .phone{
+	float: left;
+	width: 3.125rem;
+	height: 0.3125rem;
+}

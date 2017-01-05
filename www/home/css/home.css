@@ -1,5 +1,16 @@
-body{
-	background-color: #ccc;
+nav{
+	width: 100%;
+	height: 1.25rem;
+	background-color: red;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.all{
+	width: 100%;
+	overflow: auto;
+	margin-top: 1.25rem;
 }
 .swiper-container{
 	width: 100%;
@@ -11,6 +22,9 @@ body{
 }
 #banner img{
 	width: 100%;
+}
+#content{
+	background-color: #ccc;
 }
 .btns{
 	width: 100%;
@@ -36,9 +50,14 @@ body{
 	justify-content: space-around;
 	background-color: #fff;
 	margin: 0.3125rem 0;
+	box-sizing: border-box;
 }
 .reffer .ref{
 	flex-grow: 1;
+}
+.reffer .ref:nth-child(2){
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
 .ref1{
 	background: url(../img/cms_113619_1483090657.jpg)no-repeat center center;
@@ -58,17 +77,21 @@ body{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+
 }
 .sales .sale {
 	width: 50%;
+
 }
 .sal1 {
 	background: url(../img/2016122610531910.jpg@90Q.jpg)no-repeat center center;
 	background-size: contain;
+	border-bottom: 1px solid #ccc;
 }
 .sal2 {
 	background: url(../img/2016112918160610.jpg@90Q.jpg)no-repeat center center;
 	background-size: contain;
+	border-bottom: 1px solid #ccc;
 }
 .sal3 {
 	background: url(../img/2016092417350939.png@90Q.png)no-repeat center center;
@@ -115,8 +138,6 @@ body{
 }
 .milk img{
 	width: 100%;
-	margin-top: 0.15625rem;
-	
 }
 .milks{
 	width: 100%;
@@ -135,8 +156,7 @@ body{
 	border-left: 1px solid #ccc;
 }
  .milk1 img{
- 	width: 80%;
- 	height: 70%;
+ 	width: 3.125rem;
  	margin: 0 auto;
  }
  .milk1 p{
@@ -176,4 +196,13 @@ body{
 }
 .fruit h3{
 	color: red;
+}
+.sock{
+	margin-top: 0.3125rem;
+}
+.sock i:before{
+	background-color: #9E00A6;
+}
+.sock h3{
+	color: #9E00A6;
 }

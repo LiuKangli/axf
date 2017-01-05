@@ -10,9 +10,9 @@ ul,li{
 body{
 	position: relative;
 }
-header{
+/*header{
 	height: 1.25rem;
-	background: #ed3c28;
+	background: #ffd600;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -20,10 +20,10 @@ header{
 	text-align: center;
 	line-height: 1.25rem;
 	z-index: 100;
-}
+}*/
 #content{
 	position: absolute;
-	top: 1.25rem;
+	top: 0;
 	bottom: 1.25rem;
 	left: 0;
 	right: 0;

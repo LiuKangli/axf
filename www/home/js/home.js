@@ -37,6 +37,15 @@ define(['swiper'],function(swiper){
 			}
 			$('.btns').html(html);
 		}
+		//热销
+		$('#content ').on('click','.reffer .ref',function(){
+			console.log($(this));
+		});
+		$('#content').on('click','.sales .sale',function(){
+			
+		});
+		
+		
 	return {
 		bannerData:bannerData
 	}
