@@ -17,6 +17,10 @@ define(['underscore','backbone'],function(_,backbone){
 		},
 		superMarket:function(){
 			console.log('超市');
+			require(['text!superMarket/superMarket.html','superMarket/js/superMarket'],function(superMarket,superMarketCtrl){
+				superMarketCtrl.request();
+				$('#content').html(superMarket);
+			});
 		},
 		car:function(){
 			console.log('购物车');

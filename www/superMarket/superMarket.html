@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width" />
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="superMarket/css/superMarket.css"/>
 	<title>闪送超市</title>
 </head>
 <body>
-
-	<h1>闪送</h1>
+	<div id="superMarket">
+		<div id="left">
+			<ul class="leftUl">
+				<li>热销榜</li>
+				<li><a href="javascript:;">天天特价</a></li>
+				<li><a href="javascript:;">优选水果</a></li>
+				<li><a href="javascript:;">牛奶面包</a></li>
+				<li><a href="javascript:;">休闲零食</a></li>
+				<li><a href="javascript:;">冰淇淋</a></li>
+				<li><a href="javascript:;">饮料酒水</a></li>
+				<li><a href="javascript:;">方便速食</a></li>
+				<li><a href="javascript:;">肉蛋时蔬</a></li>
+				<li><a href="javascript:;">粮油调味</a></li>
+				<li><a href="javascript:;">生活用品</a></li>
+				<li><a href="javascript:;">代购香烟</a></li>
+			</ul>
+		</div>
+		
+		<div id="right">
+			<div id="rightTop">
+				<div class="rightTop classify">
+					全部分类
+				</div>
+				<div class="rightTop sort">
+					综合排序
+				</div>
+			</div>
+			
+			<div class="unfold">
+			</div>
+			
+			<div class="goods">
+				<ul id="goodsList">
+					<li>
+						<!--<div class="goodsImg"><img src="img/2.png"/></div>-->
+						<img class="goodsImg" src="http://img01.bqstatic.com/upload/goods/201/601/1118/20160111185413_188923.jpg@300w_300h_90Q"/>
+						<div class="goodsMessage">
+							<p class="goods-name">咪咪虾条</p>
+							<p></p>
+							<p class="weight">20g</p>
+							<p><span class="price"><span class="price-yuan">¥</span>0.7</span><span class="market-price">¥12</span></p>
+						</div>
+						<div class="count">
+							<div class="minus"></div>
+							<div class="countNum">1</div>
+							<div class="plus"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+		
+	
+	
+	<script type="text/javascript" id="goods">
+		<% for(var i in data){ %>
+			<li>
+				<img class="goodsImg" src="<%= data[i].img %>"/>
+				<div class="goodsMessage">
+					<p class="goods-name"><%= data[i].name %></p>
+					<p></p>
+					<p class="weight"><%= data[i].specifics %></p>
+					<p><span class="price">¥<%= data[i].price %></span>&nbsp;<span class="market_price">¥<%= data[i].market_price %></span></p>
+				</div>
+				<div class="count">
+					<div class="minus"></div>
+					<div class="countNum">1</div>
+					<div class="plus"></div>
+				</div>
+			</li>
+		<% } %>
+	</script>
+	
 	
 </body>
 </html>
