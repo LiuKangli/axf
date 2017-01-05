@@ -19,8 +19,9 @@ header{
 	right: 0;
 	text-align: center;
 	line-height: 1.25rem;
+	z-index: 100;
 }
-content{
+#content{
 	position: absolute;
 	top: 1.25rem;
 	bottom: 1.25rem;
@@ -28,13 +29,14 @@ content{
 	right: 0;
 	overflow: auto;
 }
-footer{
+#foot{
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	height: 1.25rem;
 	background-color: #eee;
+	z-index: 100;
 }
 footer ul{
 	display: flex;
