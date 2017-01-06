@@ -35,7 +35,7 @@ body{
 	left: 0;
 	right: 0;
 	height: 1.25rem;
-	background-color: #eee;
+	background-color: rgba(246,246,246,.95);
 	z-index: 100;
 }
 footer ul{

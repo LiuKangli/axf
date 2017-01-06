@@ -1,17 +1,179 @@
-.userInfo{
+nav{
 	width: 100%;
-	overflow: hidden;
 	background-color: #ffd600;
+	height: 4.6875rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top:0.78125rem;
 }
-.userInfo img {
+nav img {
 	display: block;
-	width: 1.5625rem;
-	height: 1.5625rem;
+	width: 2.34375rem;
+	height:2.34375rem;
 	border-radius: 50%;
 	float: left;
+	margin: 0.3125rem;
 }
-.userInfo .phone{
+nav .phone{
 	float: left;
-	width: 3.125rem;
-	height: 0.3125rem;
+	width: 65%;
+	height: 0.9375rem;
+	padding: 0.3125rem 0;
+	line-height: 0.9375rem;
+	font-size: 0.390625rem;
+	font-weight: bold;
+	color: #fff;
+}
+nav .vip{
+	width: 65%;
+	height: 0.9375rem;
+	float: left;
+	text-indent: 1.09375rem;
+	line-height: 0.9375rem;
+	font-size: 0.390625rem;
+	font-weight: bold;
+	background: url(../img/lv.png)no-repeat left center;
+	background-size: contain;
+	color: #e64f1a;
+}
+nav .sc{
+	width: 100%;
+	height: 1.25rem;
+	float: left;
+	background: #f3c800;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	
+}
+nav .sc>div{
+	width: 50%;
+	height: 1.25rem;
+	text-align: center;
+	/*float: left;*/
+	font-size: 0.1875rem;
+	line-height: 1.25rem;
+	color: #fff;
+}
+nav .sc .sp span{
+	background: url(../img/shoucang.png)no-repeat 0.9375rem center;
+	background-size: contain;
+	display: inline-block; 
+	width: 100%;
+	height: 0.625rem;
+	line-height: 0.625rem;
+	margin: 0 auto;
+	border-right: 1px solid #fff;
+}
+nav .sc .dp span{
+	background: url(../img/dianshou.png)no-repeat 0.9375rem center;
+	background-size: contain;
+	display: inline-block;
+	width: 100%;
+	height: 0.625rem;
+	line-height: 0.625rem;
+	margin: 0 auto;
+	text-align: center;
+}
+nav .vipStore{
+	width: 0.625rem;
+	height: 0.625rem;
+	background: url(../img/myjian.png)no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	right: 5%;
+	top: 40%;
+}
+.all{
+	width: 100%;
+	overflow: auto;
+	margin-top:5.46875rem;
+	background-color: #eee;
+}
+.order{
+	width: 100%;
+	height: 1.5625rem;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	font-size:0.4375rem;
+	line-height: 1.5625rem;
+	display: flex;
+	margin-top: 0.3125rem;
+	justify-content: space-around;
+}
+.order span{
+	text-indent: 0.3125rem;
+	flex-grow: 1;
+}
+.order .checkOrder{
+	margin-right: 0.3125rem;
+	text-align: right;
+}
+.order1,.order2{
+	width: 100%;
+	height: 1.5625rem;
+	display: flex;
+	justify-content: space-around;
+	font-size: 0.4375rem;
+	background-color: #fff;
+	padding-top: 0.625rem;
+}
+.order1 .ord img{
+	width: 0.625rem;
+	margin: 0 auto;
+}
+.order1 .ord p{
+	text-align: center;
+	font-size:0.3125rem;
+	color: #333;
+}
+.order2{
+	margin-top: 0.3125rem;
+	padding: 0.703125rem 0;
+}
+.order2 .ord img{
+	width:1.15rem;
+	margin: 0 auto;
+}
+.order2 .ord p{
+	text-align: center;
+	font-size:0.3125rem;
+	color: #333;
+}
+.order3{
+	width: 100%;
+	height: 1.5625rem;
+	font-size: 0.4375rem;
+	background-color: #fff;
+	padding-top: 0.3125rem;
+	border-top: 1px solid #ccc;
+	padding: 0.703125rem 0;
+	
+}
+.order3 .ord{
+	width: 2.475rem;
+	height: 1.875rem;
+}
+.order3 .ord img{
+	width:1.15rem;
+	margin: 0 auto;
+	
+}
+.order3 .ord p{
+	text-align: center;
+	font-size:0.3125rem;
+	color: #333;
+}
+.quit{
+	width: 100%;
+	height: 1.875rem;
+	background-color: #fff;
+	text-align: center;
+	line-height: 1.875rem;
+	font-size: 0.4375rem;
+	margin-top: 1.5625rem;
+	margin-bottom: 0.425rem;
 }
