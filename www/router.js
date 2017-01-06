@@ -24,7 +24,10 @@ define(['underscore','backbone'],function(_,backbone){
 		},
 		car:function(){
 			console.log('购物车');
-			
+			require(['text!car/car.html','car/js/car'],function(car,carCtrl){
+				carCtrl.request();
+				$('#content').html(car);
+			})
 		},
 		mySelf:function(){
 			console.log('我的');
