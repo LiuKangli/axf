@@ -25,6 +25,7 @@ define(['underscore','backbone'],function(_,backbone){
 		},
 		car:function(){
 			console.log('购物车');
+			
 		},
 		mySelf:function(){
 			console.log('我的');
