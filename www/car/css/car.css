@@ -6,6 +6,8 @@
 	height: 1.25rem;
 	line-height: 1.25rem;
 	background: #f9f9f9;
+	border-bottom: 1px solid #999;
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 }
@@ -36,8 +38,9 @@
 	background: #eee;
 	text-align: center;
 	font-size: 0.48rem;
-	
+	overflow: auto;
 }
+/*登录未选购界面*/
 #nothing{
 	display: none;
 	color: #999;
@@ -64,17 +67,213 @@
 	border-radius: 5px;
 }
 
+
+/*整理购物车界面*/
 #count{
 
 }
 .receive{
-	margin: 10px;
+	font-size: 0.45rem;
+	background-color: #fff;
+	border-top: 3px solid red;
+	border-bottom: 3px solid red;
+	border-image-source: url(../img/4.png);
+	border-width: 5px;
+	border-image-slice: 5;
+	border-image-repeat: repeat;
+	/*background: url(../img/5.png) right no-repeat;*/
+}
+.receive table{
+	border: none;
+}
+.receive td{
+	border: none;
 }
 .leftTd{
-	/*text-align: left;*/
+	text-align: text-justify;
+	text-align-last:justify;
+	white-space: nowrap;
+	vertical-align: baseline;
+	padding: 0.2rem 0.3rem 0.2rem 0.5rem;
 }
 .rightTd{
 	text-align: left;
+	padding-top: 0.2rem;
+}
+
+.change{
+	white-space: nowrap;
+	padding-right: 0.5rem;
+	background: url(../img/5.png) left no-repeat;
+	background-position: 1rem 50%;
+	background-size: 0.5rem;
+}
+.ad{
+	margin-top: 10px;
+	text-align: left;
+	font-size: 0.25rem;
+	background-color: #fff;
+	margin-bottom: 1px;
+	position: relative;
+}
+.ad1{
+	height: 1.3rem;
+	line-height: 1.3rem;
+	padding-left: 0.5rem;
+	
+}
+.ad1:before{
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 14px;
+	margin-right: 3px;
+	vertical-align: middle;
+	background-color: orange;
+	border-radius: 3px;
+}
+.ad2{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	padding-left: 0.5rem;
+}
+.ad3{
+	position: absolute;
+	right: 1rem;
+	top: 0.2rem;
+	width: 2.5rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	text-align: center;
+	color: orange;
+	border: 1px solid orange;
+	border-radius: 0.5rem;
+}
+.receiveTime{
+	height: 2rem;
+	line-height: 2rem;
+	background: #fff;
+	position: relative;
+	margin-bottom: 1px;
+	display: flex;
+	justify-content: space-between;
+}
+.time{
+	color: orange;
+}
+.receiveTime span{
+	padding: 0 0.5rem;
+}
+.chooseTime{
+	white-space: nowrap;
+	padding-right: 0.5rem;
+	background: url(../img/5.png) left no-repeat;
+	background-position: 2rem 50%;
+	background-size: 0.5rem;
+}
+.selectTime{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 2rem;
+	/*min-height: 7rem;*/
+	height: 7rem;
+	text-align: left;
+	background-color: #fff;
+	border: 1px solid #87CEFA;
+	z-index: 100;
+	overflow: auto;
+	display: none;
+}
+.selectTime optgroup{
+	line-height: 0.6rem;
+}
+.selectTime option{
+	text-indent: 10px;
+	height: 0.46rem;
+	line-height: 0.46rem;
+}
+
+.remark{
+	height: 2rem;
+	line-height: 2rem;
+	display: flex;
+	justify-content: space-around;
+	background-color: #fff;
+	margin-bottom: 1px;
+}
+.remark input{
+	width: 6rem;
+	height: 1.2rem;
+	font-size: 0.4rem;
+	text-indent: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid #999;
+}
+
+.goodsList table{
+	width: 100%;
+	background-color: #fff;
+	border: none;
+}
+.goodsList td{
+	height: 3.4rem;
+	border: none;
+}
+.row1{
+	width: 0.9375rem;
+	height: 1.5rem;
+	background: url(../img/6.png) no-repeat center center;
+	background-size: 0.6rem 0.6rem;
+	
+}
+
+.row2 img{
+	width: 2.2rem;
+	height: 2.2rem;
+}
+.row3{
+	text-align: left;
+	line-height: 1.7rem;
+}
+.row4{
+	
+}
+
+.count{
+	/*position: absolute;*/
+	/*width: 2.8rem;*/
+	height: 0.9rem;
+	/*right: 0.6rem;
+	bottom: 0.5rem;*/
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.minus{
+	width: 0.9rem;
+	height: 0.9rem;
+	background: orange url(../img/7.png) no-repeat;
+	background-size: cover;
+	border: 1px solid #ccc;
+	border-radius: 0.6rem;
+	/*display: none;*/
+}
+.countNum{
+	width: 0.2rem;
+	line-height: 1rem;
+	font-size: 0.1875rem;
+	/*display: none;*/
+}
+.plus{
+	width: 0.9rem;
+	height: 0.9rem;
+	background: orange url(../img/7.png) right;
+	background-size: cover;
+	border: 1px solid #ccc;
+	border-radius: 0.6rem;
 }
 
 
@@ -83,6 +282,9 @@
 
 
 
+
+
+/*未登录界面*/
 #login{
 	display: none;
 }

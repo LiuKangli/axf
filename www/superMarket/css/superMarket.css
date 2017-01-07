@@ -168,6 +168,11 @@ header{
 	/*background: url(../img/2.png) no-repeat;
 	background-size: cover;*/
 }
+.copyImg{
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+}
 .goodsMessage p{
 	height: 0.75rem;
 	line-height: 0.75rem;

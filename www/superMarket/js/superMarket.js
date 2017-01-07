@@ -82,12 +82,24 @@ define([],function(){
 		$('.unfold').hide();
 	})
 
+	// 增加商品数量,添加到购物车中
 	$('#content').on('click','.plus',function(e){
 		var num = $(this).prev().text();
 		e.stopPropagation();
 		$(this).siblings().show();
 		num++;
 		$(this).prev().text(num);
+		
+		// 点击添加购物车动画效果
+		console.log($(this).parent().parent().children('img'));
+		var imgUrl = $(this).parent().parent().children('img').attr('src');
+		console.log(imgUrl);
+		
+		var copyImg = '<img class="copyImg" src='+imgUrl+' />';
+		$(this).parent().parent().prepend(copyImg);
+		
+		
+		
 	});
 	$('#content').on('click','.minus',function(e){
 		var num = $(this).next().text();

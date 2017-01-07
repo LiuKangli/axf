@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8">
+		<title>选择地址</title>
+		<link rel="stylesheet" type="text/css" href="css/location.css"/>
+		<script src="../../public/lib/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header id="head">
+			<span class="headSp headLeft back"></span>
+			<div id="title">购物车</div>
+			<span class="headSp headRight"><span class="save">保存</span></span>
+		</header>
+		
+		<!--地址列表-->
+		<div id="location">
+			<div class="locationBox">
+				<div class="list">
+					<p><span class="userName">米开开开开开开</span>&nbsp;<span class="sex">先生</span><span class="phoneNum">15899979800</span></p>
+					<p class="addressInfo">
+						<span class="city">深圳</span>
+						<span class="area">宝安28区</span>
+						<span class="address">七星啦啦啦啦啦啦啦啦啦</span>
+					</p>
+					<div class="compile"></div>
+				</div>
+				
+				<div class="list">
+					<p><span class="userName">米开朗琪罗卢罗罗</span>&nbsp;<span class="sex">女士</span><span class="phoneNum">15899979800</span></p>
+					<p class="addressInfo">
+						<span class="city">深圳</span>
+						<span class="area">区82安宝</span>
+						<span class="address">七星创意工场七星创意工场七星创意工场七星创意工场</span>
+					</p>
+					<div class="compile"></div>
+				</div>
+			</div>
+
+		</div>
+		
+		<footer>
+			<div class="addAddress">
+				+新增地址
+			</div>
+		</footer>
+		
+		<!--编辑地址-->
+		<div id="updataAddress">
+			<table border="" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="leftTd">联系人</td>
+					<td><input type="text" id="userName" value="米卡扩扩扩" /></td>
+				</tr>
+				<tr>
+					<td class="leftTd"></td>
+					<td class="sexTd">
+						<input type="radio" name="sex" id="sex1" value="先生" />男
+						<label class="sex-man" for="sex1"></label>
+						<input type="radio" name="sex" id="sex2" value="女士" />女
+						<label class="sex-woman" for="sex2"></label>
+					</td>
+				</tr>
+				<tr>
+					<td class="leftTd">手机号码</td>
+					<td><input type="text" maxlength="15" id="phoneNum" value="15899979800" /></td>
+				</tr>
+				<tr>
+					<td class="leftTd">所在城市</td>
+					<td><input type="text" id="city" value="深圳" /></td>
+				</tr>
+				<tr>
+					<td class="leftTd">所在地区</td>
+					<td><input type="text" id="area" value="德冠庭" /></td>
+				</tr>
+				<tr>
+					<td class="leftTd">详细地址</td>
+					<td><input type="text" id="address" value="极乐空间欧奇预期普逊那么刻录机哦我我哦我早看沪" /></td>
+				</tr>
+			</table>
+			<div class="delete">
+				删除地址
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<script src="../../public/lib/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/location.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

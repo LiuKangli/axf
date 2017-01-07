@@ -1,0 +1,189 @@
+#head{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	background: #f9f9f9;
+	border-bottom: 1px solid #999;
+	font-size: 0.48rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.headSp{
+	width: 1.6rem;
+}
+#title{
+	padding: 0 1rem;
+	/*font-size: 0.48rem;*/
+	font-weight: bold;
+}
+.headLeft{
+	height: 0.9rem;
+	margin-top: 0.2rem;
+	background: url(../img/1.png) no-repeat left;
+	background-size: contain;
+}
+.headRight{
+	color: #999;
+
+}
+.save{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#location{
+	position: absolute;
+	left: 0;
+	top: 1.25rem;
+	right: 0;
+	bottom: 1.25rem;
+	background: #eee;
+	overflow: auto;
+}
+.locationBox{
+	margin-top: 0.3125rem;
+}
+.list{
+	padding: 0.3rem;
+	font-size: 0.45rem;
+	color: #333;
+	background-color: #fff;
+	margin-bottom: 1px;
+	position: relative;
+}
+.list p{
+	width: 6.5rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.city{
+	display: none;
+}
+.sex{
+	display: none;
+}
+.addressInfo{
+	color: #999;
+}
+.compile{
+	position: absolute;
+	right: 0;
+	top: 0.5rem;
+	width: 3rem;
+	height: 2rem;
+	/*padding-left: 0.2rem;*/
+	border-left: 1px solid #eee;
+	background: url(../img/2.png) no-repeat center center;
+	background-size: 0.8rem 0.8rem;
+}
+
+
+
+
+
+footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1.25rem;
+	display: flex;
+	justify-content: space-around;
+}
+.addAddress{
+	margin-top: 0.125rem;
+	font-size: 0.45rem;
+	text-align: center;
+	width: 5rem;
+	height: 1rem;
+	line-height: 1rem;
+	background-color: orange;
+	border-radius: 5px;
+}
+
+
+
+#updataAddress{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1.25rem;
+	bottom: 0;
+	z-index: 100;
+	background: #eee;
+	display: none;
+}
+#updataAddress input{
+	outline: none;
+	border: none;
+}
+#updataAddress table{
+	width: 100%;
+	font-size: 0.45rem;
+	border: none;
+	background-color: #fff;
+}
+#updataAddress table td{
+	border: none;
+	border-bottom: 1px solid #eee;
+}
+.leftTd{
+	width: 2.5rem;
+	height: 1.4rem;
+	padding-left: 0.3125rem;
+}
+.city{
+	
+}
+.area{
+	
+}
+.delete{
+	margin-top: 0.3125rem;
+	text-align: center;
+	font-size: 0.45rem;
+	background-color: #fff;
+	height: 2rem;
+	line-height: 2rem;
+}
+.sexTd{
+	position: relative;
+}
+
+.sex-man{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #FFD600;
+	border-radius: 0.25rem;
+	/*left: 0.09375rem;*/
+	left: 0.05rem;
+	top: 0.44rem;
+}
+.sex-woman{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #FFD600;
+	border-radius: 0.25rem;
+	left: 1.4rem;
+	top: 0.44rem;
+}
+#sex1:checked+label{
+	background-image: url(../img/3.png);
+	background-size: 0.4rem;
+	background-repeat: no-repeat;
+	background-position: center center; 
+}
+#sex2:checked+label{
+	background-image: url(../img/3.png);
+	background-size: 0.4rem;
+	background-repeat: no-repeat;
+	background-position: center center; 
+}
