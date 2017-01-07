@@ -5,7 +5,7 @@ define(['template'], function(template) {
 			url: "http://h5.yztctech.net/api/axf/apiyuding.php",
 			dataType: 'json',
 			success: function(data) {
-				console.log(data);
+//				console.log(data);
 				var html = baidu.template('tpl', data);
 				$('.pl').html(html);
 				lazyLoad();
@@ -14,13 +14,13 @@ define(['template'], function(template) {
 		});
 		//懒加载
 		function lazyLoad() {
-			var imgs = $('#content').find('[data-src]');
-			$('#content').on('scroll', function() {
+			var imgs = $('.all').find('[data-src]');
+			$('#content .all').on('scroll', function() {
 				load();
 			});
 		}
 		function load() {
-			var $content = $('#content');
+			var $content = $('.all');
 			var imgs = $content.find('[data-src]');
 			// 获取当前屏幕高度
 			var height = $content.height();
@@ -36,3 +36,7 @@ define(['template'], function(template) {
 		request: request
 	}
 });
+//	$('footer ').on('click','li',function(){
+//		alert('点击了');
+//	console.log($(this));
+//});

@@ -30,7 +30,7 @@ define(['swiper'],function(swiper){
 	}
 	//按钮
 		function menue(data){
-			console.log(data);
+//			console.log(data);
 			var html = '';
 			for (var i=0;i<data.length;i++){
 				html+='<div class="htn"><img src='+data[i].activity.img+' />'+data[i].activity.name+'</div>'
@@ -38,14 +38,25 @@ define(['swiper'],function(swiper){
 			$('.btns').html(html);
 		}
 		//热销
-		$('#content ').on('click','.reffer .ref',function(){
-			console.log($(this));
+		$('#content ').on('click','.btns .htn',function(){
+//			console.log($(this).text());
+			if($(this).text()=='疯狂秒杀'){
+				location.href = 'home/miaosha/miaosha.html'
+			}
 		});
 		$('#content').on('click','.sales .sale',function(){
 			
 		});
+		//搜索
+		$('#content ').on('click','.search span',function(){
+			location.href = 'home/search/search.html';
+		});
 		
 		
+//$('footer').on('click','li',function(){
+//	console.log($(this).index()+'home');
+//	
+//});
 	return {
 		bannerData:bannerData
 	}

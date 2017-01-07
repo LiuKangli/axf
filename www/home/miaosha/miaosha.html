@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="css/miaosha.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/rest.css"/>
+		<title>秒杀</title>
+	</head>
+	<body>
+		<header>
+			<span class="back"onclick="javascript:history.back(-1);"></span>
+			疯狂秒杀
+			<span class="refresh"></span>
+		</header>
+		<section>
+			<div class="backImg">
+				<div class="time">
+					<div class="time_div done">
+						<p>10:00</p>
+						<p>已结束</p>
+						<img src="img/hgou.png" alt="" />
+					</div>
+					<div class="time_div done">
+						<p>12:00</p>
+						<p>已结束</p>
+						<img src="img/hgou.png" alt="" />
+					</div>
+					<div class="time_div done">
+						<p>15:00</p>
+						<p>已结束</p>
+						<img src="img/hgou.png" alt="" />
+					</div>
+					<div class="time_div">
+						<p>19:00</p>
+						<p>正在抢购</p>
+						<img src="img/hgou1.png" class="active" alt="" />
+					</div>
+				</div>
+				<div class="share">分享</div>
+			</div>
+			<div class="overTime">
+				<div class="left">
+					<p class="title">距本场结束</p>
+					<p class="left_time">02:01:12</p>
+				</div>
+				<div class="right">
+					<span class="roule">查看活动规则</span>
+				</div>
+			</div>
+			<div class="lists">
+				<ul>
+				</ul>		
+			</div>
+			<div class="gwc"></div>
+		</section>
+		<script src="../../public/lib/flexible.js"></script>
+<script src="../../public/lib/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/miaosha.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../public/lib/template.js"></script>
+		<script type="text/template" id="tpl">
+			
+			<%for(var i=0; i<product.length; i++){%>
+				<li>
+						<div class="list_ofGood">
+							<div class="goodImg">
+								<img src="../../reserve/img/lanjiazai.png" data-src="<%=product[i].img %>" alt="" />
+							</div>
+							<div class="goodRight">
+								<p class="goodName"><%=product[i].name%></p>
+							<p class="goodNum"><%=product[i].specifics%></p>
+							<p class="goodPrice">
+								<b></b>
+								<span class="Nowprice"><%=product[i].price%></span>
+								<span class="oldPrice"><b></b><%=product[i].market_price%></span>
+								
+							</p>
+							<div class="goodBuy"><%=product[i].btnText%></div>
+							</div>
+						</div>
+					</li>
+			<%}%>
+		</script>
+	</body>
+</html>

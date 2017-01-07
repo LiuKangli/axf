@@ -1,0 +1,77 @@
+body,html{
+	height: 100%;
+	
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1.25rem;
+	background-color: rgba(246,246,246,1);
+	text-align: center;
+	font-size: 0.390625rem;
+	color: #333;
+	font-weight: bold;
+	line-height: 1.25rem;
+}
+header .back{
+	display: block;
+	width: 0.625rem;
+	height:1.25rem;
+	position: absolute;
+	left: 0.234375rem;
+	top: 0;
+	background: url(../../../car/img/1.png)no-repeat center center;
+	background-size: contain;
+}
+header .myOrder{
+	display: block;
+	width:0.625rem;
+	height:1.25rem;
+	position: absolute;
+	right: 0.234375rem;
+	top: 0;
+background: url(../../../home/miaosha/img/shuaxin.png) no-repeat left center;
+	background-size: contain;
+}
+
+section{
+	position: absolute;
+	top: 1.25rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	background-color: rgba(246,246,246,1);
+}
+.btns{
+	width: 100%;
+	height: 1.25rem;
+	background-color: #fff;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	
+}
+.btns ul{
+	display: flex;
+	justify-content: space-around;
+}
+.btns li{
+	font-size: 0.390625rem;
+	line-height: 1.25rem;
+}
+.notFound{
+		width: 3.125rem;
+		height: 3.125rem;
+		margin: 1.5625rem auto;
+}
+.notFound p{
+	text-align: center;
+	font-size: 0.3125rem;
+	
+}
+.notFound img{
+	width: 100%;
+}

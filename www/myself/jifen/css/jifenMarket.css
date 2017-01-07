@@ -1,0 +1,160 @@
+body,html{
+height: 100%;
+}
+nav{
+	width: 100%;
+	height: 1.25rem;
+	background-color: rgba(246,246,246,1);
+	border-bottom: 1px solid #eee;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 100;
+}
+nav span{
+	display: block;
+	width: 0.625rem;
+	height:1.25rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/left.png)no-repeat center center;
+	background-size: contain;
+}
+nav h3{
+	width: 100%;
+	text-align: center;
+	font-size: 0.546875rem;
+	color: #333;
+	font-weight: 400;
+	line-height: 1.25rem;
+}
+.all{
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+	left: 0;
+	top: 1.25rem;
+	bottom: 0;
+}
+.circle {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    position: relative;
+    border-radius: 50%;
+    background: #ddd;
+    margin: 0.3125rem auto;
+    
+}
+.pie_left, .pie_right {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    position: absolute;
+    top: 0;left: 0;
+}
+.left, .right {
+    display: block;
+    width:4.6875rem;
+    height:4.6875rem;
+    background:#fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+.pie_right, .right {
+    clip:rect(0,auto,auto,2.34375rem);
+}
+.pie_left, .left {
+    clip:rect(0,2.34375rem,auto,0);
+}
+.mask {
+	width: 2.8125rem;
+	height:2.8125rem;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left:0.625rem;
+	top: 0.625rem;
+	border: 0.3125rem solid #ccc;
+    text-align: center;
+    line-height: 2.34375rem;
+    font-size: 0.3125rem;
+}
+
+
+.mask .title{
+	height: 0.625rem;
+	font-size: 0.46875rem;
+	color: #ccc;
+}
+.mask .num{
+	color: #999;
+	
+	font-size: 0.46875rem;
+	font-weight: bold;
+}
+.btns{
+	width: 100%;
+	height: 3.125rem;
+	border-top: 1px solid #ccc;
+	/*border-bottom: 1px solid #ccc;*/
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+.btns .bt{
+	flex-grow: 1;
+}
+.btns .bt:nth-child(2){
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.btns .bt img{
+	width: 0.78125rem;
+	margin: 0.3125rem auto;
+	margin-top: 0.78125rem;
+}
+.btns .bt  p{
+	width: 100%;
+	text-align: center;
+	font-size: 0.46875rem;
+	color: #ccc;
+}
+.back{
+	width: 100%;
+	height: 0.46875rem;
+	background-color: #ccc;
+}
+.quan{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.quan .qu{
+	width: 49%;
+	height: 3.90625rem;
+}
+.quan .qu:nth-child(1){
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.quan .qu:nth-child(2){
+	border-bottom: 1px solid #ccc;
+}
+.quan .qu:nth-child(3){
+	border-right: 1px solid #ccc;
+}
+.qu img{
+	width: 100%;
+	margin: 0.3125rem auto;
+}
+.qu p{
+	font-size: 0.46875rem;
+	text-align: center;
+	line-height: 0.46875rem;
+}

@@ -2,7 +2,7 @@ nav{
 	height: 1.25rem;
 	background-color: rgba(246,246,246,1);
 	border-bottom: 1px solid #eee;
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	right: 0;
@@ -16,8 +16,11 @@ nav h3{
 }
 .all{
 	width: 100%;
+	position: absolute;
 	overflow: auto;
-	margin-top: 1.25rem;
+	left: 0;
+	top: 1.25rem;
+	bottom: 0;
 	/*background-color: red;*/
 }
 .lists{

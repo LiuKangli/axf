@@ -1,0 +1,241 @@
+body,html{
+	height: 100%;
+	
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1.25rem;
+	background-color: rgba(246,246,246,1);
+	text-align: center;
+	font-size: 0.390625rem;
+	color: #333;
+	font-weight: bold;
+	line-height: 1.25rem;
+}
+header .back{
+	display: block;
+	width: 0.625rem;
+	height:1.25rem;
+	position: absolute;
+	left: 0.234375rem;
+	top: 0;
+	background: url(../../../car/img/1.png)no-repeat center center;
+	background-size: contain;
+}
+header .refresh{
+	display: block;
+	width: 0.625rem;
+	height:1.25rem;
+	position: absolute;
+	right: 0.234375rem;
+	top: 0;
+	background: url(../img/shuaxin.png)no-repeat center center;
+	background-size: contain;
+}
+
+section{
+	position: absolute;
+	top: 1.25rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	overflow-x: hidden;
+}
+.backImg{
+	width: 100%;
+	height: 6.25rem;
+	background: url(../img/2016123018095858.jpg@90Q.jpg)no-repeat center center;
+	position: relative;
+}
+.time{
+	width: 100%;
+	height:1.9rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+.time .done{
+	background-color: #000;
+	border-right: 2px solid #fff;
+}
+.time .time_div{
+	flex-grow: 1;
+}
+.time .time_div p{
+	width: 100%;
+	height: 0.46875rem;
+	line-height: 0.46875rem;
+	text-align: center;
+	font-size: 0.390625rem;
+	margin: 0.078125rem;
+	color: #fff;
+}
+.time .time_div:nth-child(4){
+	background-color: #ffd600;
+}
+.time .time_div:nth-child(4) p{
+	color: #333;
+}
+.time .time_div img{
+	display: block;
+	width: 0.46875rem;
+	margin: 0.15625rem auto;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+.time .time_div .active{
+		border: 1px solid #333;
+}
+.share{
+	width: 1.5625rem;
+	height: 0.625rem;
+	border-radius: 0.3125rem;
+	background-color: #333;
+	position: absolute;
+	right: 0.234375rem;
+	font-size: 0.3125rem;
+	line-height: 0.625rem;
+	bottom: 2.34375rem;
+	text-align: center;
+	color:#fff;
+}
+.overTime{
+	width: 100%;
+	height: 1.40625rem;
+	/*background-color: red;*/
+}
+.overTime .left{
+	width: 40%;
+	height: 100%;
+	float: left;
+	background-color:#ffd600 ;
+}
+.overTime .right{
+		float: left;
+		width: 60%;
+		height: 100%;
+	background-color: #eee;
+}
+.overTime .left  p{
+	text-indent: 0.46875rem;
+}
+.overTime .left .title{
+	font-size: 0.46875rem;
+	height: 50%;
+}
+.overTime .left .left_time{
+	font-size: 0.46875rem;
+	height: 50%;
+	line-height: 100%;
+}
+.right .roule{
+	display: block;
+	width: 50%;
+	height: 0.9375rem;
+	color: #fff;
+	line-height: 0.9375rem;
+	text-align: center;
+	float: right;
+	background-color: #333;
+	border-radius: 0.625rem;
+	margin: 0.28125rem 0.3125rem;
+	font-size:0.46875rem;
+}
+.lists{
+	width: 100%;
+	overflow: hidden;
+	background-color: #eee;
+}
+.lists li{
+	margin-bottom: 0.15625rem;
+	background-color: #fff;
+}
+.lists .list_ofGood{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.3125rem;	
+}
+.list_ofGood .goodImg{
+	width: 40%;
+	height: 100%;
+	min-height: 3.125rem;
+	float: left;
+	border-right: 1px solid #eee;
+}
+.list_ofGood .goodImg img{
+	display: block;
+	width: 100%;
+}
+.list_ofGood .goodRight{
+	width: 59%;
+	height: 100%;
+	float: left;
+}
+.goodRight  p{
+	width: 100%;
+	height: 0.625rem;
+	font-size: 0.46875rem;
+	text-indent: 0.3125rem;
+	line-height: 0.625rem;
+	color: #333;
+	margin-top: 0.15625rem;
+}
+.goodRight .goodName{
+	font-size: 0.46875rem;
+	font-weight: 500;
+	color: #333;
+}
+.goodRight .goodPrice{
+	/*background-color: red;*/
+}
+.goodRight .goodPrice  b:before{
+	content: '￥';
+	color: red;
+	font-weight: 100;
+	font-size: 0.3125rem;
+}
+.goodRight .goodPrice .Nowprice{
+	font-size: 0.703125rem;
+	color: red;
+	font-weight: bold;
+}
+.goodRight .goodPrice .oldPrice b:before{
+	content: '/原价:';
+	font-weight: 100;
+	font-size: 0.3125rem;
+	color: #999;
+}
+.goodRight .goodPrice .oldPrice{
+	color: #999;
+	font-size: 0.3125rem;
+}
+.goodRight .goodBuy{
+	margin-top:0.15625rem;
+	width: 50%;
+	height: 1rem;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1rem;
+	margin-left: 0.46875rem;
+	border-radius:0.546875rem;
+	background-color: rgba(255,0,0,0.6);
+	font-size: 0.46875rem;
+}
+.gwc{
+	width: 1.25rem;
+	height: 1.25rem;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 0.15625rem;
+	right: 0.15625rem;
+	background:#ffd600 url(../img/gwc.png)no-repeat center center;
+	background-size: contain;
+}

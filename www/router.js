@@ -8,11 +8,9 @@ define(['underscore','backbone'],function(_,backbone){
 			'reserve':'reserve'
 		},
 		home:function(){
-			console.log('首页');
 			require(['text!home/home.html','home/js/home'],function(home,homeData){
 				homeData.bannerData();
-				$('#content').html(home);
-				
+				$('#content').html(home);	
 			});
 		},
 		superMarket:function(){
@@ -31,17 +29,16 @@ define(['underscore','backbone'],function(_,backbone){
 			})
 		},
 		mySelf:function(){
-			console.log('我的');
 			require(['text!myself/myself.html','myself/js/myself'],function(myself,myselfJs){
 				$('#content').html(myself);
 			});
 		},
 		reserve:function(){
-			console.log('预定');
 			require(['text!reserve/reserve.html','reserve/js/reserve'],function(reserve,reserveJs){
 				reserveJs.request();
 				$('#content').html(reserve);
 			});
+			
 		},
 		initialize:function(){
 			location.hash = 'home';
@@ -49,4 +46,6 @@ define(['underscore','backbone'],function(_,backbone){
 	});
 	var w = new router();
 	backbone.history.start();
+	
+
 });

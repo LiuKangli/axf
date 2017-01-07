@@ -55,6 +55,7 @@ footer li figure img{
 	margin: 0 auto;
 	margin-top: 0.078125rem;
 	height: 0.703125rem;
+	/*transition: all .5s;*/
 }
 footer li figcaption{
 	font-size: 10px;
