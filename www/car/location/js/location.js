@@ -16,11 +16,12 @@ var obj = {
 			"address":"第五大街"
 		}
 	}
-//localStorage.setItem("user",JSON.stringify(obj));
+
+localStorage.setItem("user",JSON.stringify(obj));
 
 
 var index = 0;
-//点击保存
+// 点击保存
 $('.save').click(function(){
 	var data = localStorage.getItem("user");
 	var useerr = JSON.parse(data)
@@ -91,11 +92,8 @@ $('.locationBox').on('click','.compile',function(){
 	$('#city').val(user.city);
 	$('#area').val(user.are);
 	$('#address').val(user.adrress);
-	
 
-	
-	
-	
+
 	// 左上角返回键变更,功能变更
 	$('#head').prepend('<span class="headSp headLeft goBack"></span>');
 	$('.back').remove();
@@ -103,55 +101,8 @@ $('.locationBox').on('click','.compile',function(){
 	goBack();
 	// 编辑页面显示
 	$('#updataAddress').toggle();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-//// 获取当前列表的所有用户信息
-////	console.log($(this));	console.log($(this).parent().find('.userName').text());
-//	var userName = $(this).parent().find('.userName').text();
-//	var sex = $(this).parent().find('.sex').text();
-//	var phoneNum = $(this).parent().find('.phoneNum').text();
-//	var city = $(this).parent().find('.city').text();
-//	var are = $(this).parent().find('.area').text();
-//	var address = $(this).parent().find('.address').text();		console.log(sex,phoneNum,city,are,address);
-//// 赋予用户信息给编辑页面
-//	$('#userName').val(userName);
-//	if(sex == '先生'){
-//		$('#sex1').attr('checked',1);
-////		console.log('先生');
-////		console.log($('#sex1').attr('checked',1).next('input'));
-//	}else{
-//		$('#sex2').attr('checked',1);
-////		console.log('女士');
-//	}
-//	$('#phoneNum').val(phoneNum);
-//	$('#city').val(city);
-//	$('#area').val(are);
-//	$('#address').val(address);
-	
-	// 保存按钮显示
 	$('.save').show();
-	
-//	// 点击保存,把值返回
-//	var $this = $(this).parent();
-////	console.log($this.find('.userName'));
-////	console.log($this);
-//	$('.save').on('click',function(){
-//		save($this);
-//	});
-	
-	
+
 	// 返回上一页
 	$('#head .back').on('click',function(){
 		console.log('back');
@@ -163,44 +114,6 @@ $('.locationBox').on('click','.compile',function(){
 });
 
 
-
-// 保存并返回
-function save($this){
-	// 把当前值返回
-//		console.log($('#userName').val());
-		var newName = $('#userName').val();
-		var phoneNum = $('#phoneNum').val();
-		var city = $('#city').val();
-		var are = $('#area').val();
-		var address = $('#address').val();
-//		console.log(newName);
-//		console.log($this);
-
-		if($this){
-//			console.log($this.find('.userName'));
-			$this.find('.userName').text(newName);
-			$this.find('.phoneNum').text(phoneNum);
-			$this.find('.city').text(city);
-			$this.find('.area').text(are);
-			$this.find('.address').text(address);
-		}
-		console.log('保存');
-//		console.log($this);
-		
-
-		// 编辑页面隐藏
-		$('#updataAddress').hide();
-		// 保存按钮隐藏
-		$('.save').hide();
-		// 左上角返回键变更,功能恢复
-		$('.back').remove();		
-		$('.goBack').remove();
-		$('#head').prepend('<span class="headSp headLeft back"></span>');
-		
-		
-		
-	
-}
 
 // 返回地址列表函数
 function goBack(){
@@ -215,8 +128,9 @@ function goBack(){
 	});
 }
 
-$('.locationBox').on('click','.list',function(){
-	localStorage.setItem('index',$(this).index());
+$('.locationBox').on('click','.list p',function(){
+//	alert($(this).parent().index());
+	localStorage.setItem('index',$(this).parent().index());
 	window.history.back(-1);
 });
 
@@ -246,5 +160,24 @@ $('.addAddress').on('click',function(){
 	$('#area').val('');
 	$('#address').val('');
 	
+	changeSave();
 });
+
+function changeSave(){
+	$('.create').click(function(){
+//		$() <div class="list">
+//					<p><span class="userName">米开开开开开开</span>&nbsp;<span class="sex">先生</span><span class="phoneNum">15899979800</span></p>
+//					<p class="addressInfo">
+//						<span class="city">深圳</span>
+//						<span class="area">宝安28区</span>
+//						<span class="address">七星啦啦啦啦啦啦啦啦啦</span>
+//					</p>
+//					<div class="compile"></div>
+//				</div>
+
+		
+	});
+
+}
+
 

@@ -89,7 +89,7 @@ define([],function(){
 		$('.unfold').hide();
 	});
 
-	var count = 0;
+	var count = sessionStorage.getItem('count');
 	// 增加商品数量,添加到购物车中
 	$('#content').on('click','.plus',function(){
 		var num = $(this).prev().text();

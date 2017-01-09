@@ -140,22 +140,26 @@ define([],function(){
 		
 		getCarInfo();
 		function getCarInfo(){
-			// 获取值赋给列表
-			var index = localStorage.getItem('index');
-			var newData = localStorage.getItem("user");
-			var newUser = JSON.parse(newData)[index];
-			console.log(newUser.name);
-			$('.userName').text(newUser.name);
-			if(newUser.sex == 1){
-				$('.sex').text('先生');
-			}else{
-				$('.sex').text('女士');
-			}
-			$('.phoneNum').text(newUser.phone);
-			$('.city').text(newUser.city);
-			$('.area').text(newUser.are);
-			$('.address').text(newUser.address);
-			console.log(02);
+				var index = localStorage.getItem('index');
+//			if(!index){
+//				index = 0;
+//			}
+				// 获取值赋给列表
+				console.log(index);
+				var newData = localStorage.getItem("user");
+				var newUser = JSON.parse(newData)[index];
+				console.log(newUser.name);
+				$('.userName').text(newUser.name);
+				if(newUser.sex == 1){
+					$('.sex').text('先生');
+				}else{
+					$('.sex').text('女士');
+				}
+				$('.phoneNum').text(newUser.phone);
+				$('.city').text(newUser.city);
+				$('.area').text(newUser.are);
+				$('.address').text(newUser.address);
+				console.log(02);
 		}
 		
 	}

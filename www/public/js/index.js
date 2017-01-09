@@ -3,28 +3,6 @@
 	console.log($(this).index());
 	defaultImg($(this).index());
 	small($(this).index());
-	if($(this).index()==3){
-		getCarInfo();
-//		// 获取值赋给列表
-//		var index = localStorage.getItem('index');
-//		var newData = localStorage.getItem("user");
-//		var newUser = JSON.parse(newData)[index];
-//		console.log(newUser.name);
-//		console.log($('#content #car .userName').text());
-//		$('#content #car .userName').text(newUser.name);
-//		if(newUser.sex == 1){
-//			$('#content #car .sex').text('先生');
-//		}else{
-//			$('#content #car .sex').text('女士');
-//		}
-//		$('#content #car .phoneNum').text(newUser.phone);
-//		$('#content #car .city').text(newUser.city);
-//		$('#content #car .area').text(newUser.are);
-//		$('#content #car .address').text(newUser.address);
-//		console.log(02);
-	}
-	
-	
 	
 });
 function defaultImg(num){
@@ -36,7 +14,6 @@ function defaultImg(num){
 		}else{
 			$('footer li').eq(i).children('a').children('figure').children('img').attr('src',defaul);
 		}
-
 	}
 }
 function small(i) {
@@ -59,25 +36,4 @@ $('#content').on('click','#superMarket',function(){
 	$('.allNum').text(count);
 });
 
-window.onload=function(){
-	getCarInfo();
-	console.log('111');
-}
-function getCarInfo(){
-	// 获取值赋给列表
-	var index = localStorage.getItem('index');
-	var newData = localStorage.getItem("user");
-	var newUser = JSON.parse(newData)[index];
-	console.log(newUser.name);
-	$('.userName').text(newUser.name);
-	if(newUser.sex == 1){
-		$('.sex').text('先生');
-	}else{
-		$('.sex').text('女士');
-	}
-	$('.phoneNum').text(newUser.phone);
-	$('.city').text(newUser.city);
-	$('.area').text(newUser.are);
-	$('.address').text(newUser.address);
-	console.log(02);
-}
+
