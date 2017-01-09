@@ -61,3 +61,22 @@ footer li figcaption{
 	font-size: 10px;
 	text-align: center;
 }
+
+
+#car{
+	/*background: red;*/
+	position: relative;
+}
+.allNum{
+	position: absolute;
+	width: 0.7rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	background: #F40;
+	border-radius: 0.35rem;
+	left: 0.9rem;
+	top: 0.1rem;
+	font-size: 0.2rem;
+	color: #fff;
+	display: none;
+}

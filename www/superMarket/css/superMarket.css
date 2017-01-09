@@ -1,11 +1,54 @@
 header{
-	position: absolute;
+	/*position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	width: 100%;
 	height: 1.25rem;
-	background: red;
+	background: red;*/
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1.25rem;
+	background: #FFD600;
+	font-size: 0.48rem;
+	/*border-bottom: 1px solid #999;*/
+	/*box-sizing: border-box;*/
+	display: flex;
+	justify-content: space-between;
+}
+#title{
+	padding-left: 1rem;
+	font-size: 0.48rem;
+	line-height: 1.25rem;
+	/*background: url(../img/1.png) no-repeat 3.2rem center;*/
+	/*background-size: 0.4rem;*/
+}
+#title:after{
+	content: '';
+	display: inline-block;
+	margin-left: 0.15625rem;
+	/*width: 4px;
+	height: 4px;*/
+	border: 4px solid transparent;
+	border-top-color: #000;
+}
+.headSp{
+	width: 2rem;
+}
+.headRight{
+	/*width: 2rem;*/
+	padding-left: 1rem;
+	font-size: 0.4rem;
+	text-align: center;
+}
+.headRight img{
+	width: 0.55rem;
+	height: 0.55rem;
+	padding-top: 0.0625rem;
+	margin: auto;
 }
 
 #superMarket{
@@ -117,15 +160,19 @@ header{
 .unfold li{
 	height: 0.8rem;
 	line-height: 0.8rem;
-    border: 1px solid #ffd600;
+    border: 1px solid #999;
     border-radius: 5px;
-	background: rgb(255, 249, 217);
+	background: #eee;
 	padding: 0 0.2rem;
 	margin: 0.25rem 0 0 0.25rem;
 }
+.unfold li.active{
+	background: rgb(255, 249, 217);
+	border: 1px solid #ffd600;
+}
 
 .allCountNum{
-	display: block;
+	display: none;
 	position: absolute;
 	width: 1rem;
 	height: 1rem;
@@ -170,9 +217,19 @@ header{
 }
 .copyImg{
 	position: absolute;
+	z-index: 1000;
 	width: 3rem;
 	height: 3rem;
+	border-radius: 1.5rem;
+	/*left: 4rem;*/
+	/*top: 2rem;*/
+	/*transition : 5s;
+	transform: rotate(0deg);*/
 }
+/*.plus:hover.copyImg{
+	top: 6rem;
+	transform: rotate(90deg);
+}*/
 .goodsMessage p{
 	height: 0.75rem;
 	line-height: 0.75rem;

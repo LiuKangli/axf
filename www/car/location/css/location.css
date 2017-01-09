@@ -138,6 +138,11 @@ footer{
 	height: 1.4rem;
 	padding-left: 0.3125rem;
 }
+.userName{
+	display: inline-block;
+	width: 3.16rem;
+	overflow: hidden;
+}
 .city{
 	
 }

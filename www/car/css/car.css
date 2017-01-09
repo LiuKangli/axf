@@ -219,15 +219,18 @@
 	border: none;
 }
 .goodsList td{
-	height: 3.4rem;
 	border: none;
+	border-bottom: 1px solid #999;
+}
+.goods{
+	height: 3.4rem;
 }
 .row1{
 	width: 0.9375rem;
 	height: 1.5rem;
-	background: url(../img/6.png) no-repeat center center;
-	background-size: 0.6rem 0.6rem;
-	
+	/*background: url(../img/6.png) no-repeat center center;
+	background-size: 0.6rem 0.6rem;*/
+	position: relative;
 }
 
 .row2 img{
@@ -242,10 +245,47 @@
 	
 }
 
+.goodsList .countAll .row3{
+	line-height: 1.5rem;
+}
+.goodsList .decide{
+	width: 4rem;
+	background: #FFD600;
+}
+
+.select{
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	background: #FFD600;
+	border-radius: 0.25rem;
+	left: 0.21rem;
+	top: 1.44rem;
+}
+.selected{
+	top: 0.5rem;
+}
+.choose:checked+label{
+	background-image: url(../img/9.png);
+	background-size: 0.4rem;
+	background-repeat: no-repeat;
+	background-position: center center; 
+}
+.countText{
+	/*height: 1.5rem;*/
+	height: 100%;
+	line-height: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+.red{
+	color: red;
+}
 .count{
 	/*position: absolute;*/
-	/*width: 2.8rem;*/
+	width: 2.8rem;
 	height: 0.9rem;
+	margin-right: 0;
 	/*right: 0.6rem;
 	bottom: 0.5rem;*/
 	margin-top: 1.5rem;

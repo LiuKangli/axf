@@ -1,22 +1,42 @@
 define([],function(){
 	function request(){
+		countPrice();
+		function countPrice(){
+			var x = $('.goods').length;
+			console.log(x);
+			var allPrice=0;
+			for(var i=0; i<$('.goods').length; i++){
+				var price = parseInt($('.goods').eq(i).find('.price').text());
+				var countNum = parseInt($('.goods').eq(i).find('.countNum').text());
+//				console.log(price*countNum);
+//				console.log(countNum);
+//				var product = price*countNum
+				allPrice += price*countNum;
+			}
+			console.log(allPrice);
+			$('.allPrice').text(allPrice);
+		}
+		
 		// 减少数量
 		$('.goodsList .minus').on('click',function(){
-			console.log(2222);
-			console.log($(this).next().text());
+			
+//			console.log(2222);
+//			console.log($(this).next().text());
 			var num = $(this).next().text();
 			num--;
 			$(this).next().text(num);
 			if(num<=0){
-				console.log($(this).parent().parent().parent());
+//				console.log($(this).parent().parent().parent());
 				$(this).parent().parent().parent().remove();
 			}
+			countPrice();
 		});
 		// 增加数量
 		$('.goodsList .plus').on('click',function(){
 			var num = $(this).prev().text();
 			num++;
 			$(this).prev().text(num);
+			countPrice();
 		});
 		// 选择收货时间
 		$('.chooseTime').on('click',function(e){
@@ -63,7 +83,7 @@ define([],function(){
 		console.log(t);
 		// 0点至19点
 		if(t<=11 && t>1){
-			console.log($('.today').children());
+//			console.log($('.today').children());
 			$('.today').children().eq(11-t).prevAll().hide();
 //				$('<option value="一小时送达">&nbsp;一小时送达</option>').prependTo('.today');
 			$('.today').prepend('<option value="一小时送达">&nbsp;一小时送达</option>');
@@ -82,6 +102,22 @@ define([],function(){
 		$('.change').on('click',function(){
 			console.log(000000);
 			window.location.href = 'car/location/location.html';
+		});
+		
+		
+		// 复选框
+//		$('#select').on('click',function(){
+//			
+//		});
+		$("#select").click(function(){
+			console.log('复选框');
+		    if(this.checked){   
+		    	console.log('复选框1');
+		        $(".choose").prop("checked", true);  
+		    }else{   
+		    	console.log('复选框2')
+				$(".choose").prop("checked", false);
+		    }   
 		});
 		
 	}
