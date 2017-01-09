@@ -87,17 +87,17 @@ define([],function(){
 	$('#content').on('click',function(e){
 		e.stopPropagation();
 		$('.unfold').hide();
-	})
+	});
 
 	var count = 0;
 	// 增加商品数量,添加到购物车中
-	$('#content #superMarket').on('click','.plus',function(e){
+	$('#content').on('click','.plus',function(){
 		var num = $(this).prev().text();
 //		e.stopPropagation();
 		$(this).siblings().show();
 		num++;
 		$(this).prev().text(num);
-		
+		console.log('增加数量');
 		// 点击添加购物车动画效果
 		var imgUrl = $(this).parent().parent().children('img').attr('src');
 
@@ -156,11 +156,12 @@ define([],function(){
 		
 		// 把物品数量增加显示在下方的购物车中
 		count++;
+		console.log(count);
 //		localStorage.setItem('count',count);
 		sessionStorage.setItem('count',count);
 		
 	});
-	$('#content').on('click','.minus',function(e){
+	$('#content').on('click','.minus',function(){
 		var num = $(this).next().text();
 //		e.stopPropagation();
 		num--;

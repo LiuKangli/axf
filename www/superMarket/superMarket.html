@@ -88,7 +88,7 @@
 		
 	
 	
-	<script type="text/javascript" id="goods">
+	<script type="text/template" id="goods">
 		<% for(var i in data){ %>
 			<li>
 				<img class="goodsImg" src="<%= data[i].img %>"/>
@@ -96,7 +96,7 @@
 					<p class="goods-name"><%= data[i].name %></p>
 					<p></p>
 					<p class="weight"><%= data[i].specifics %></p>
-					<p><span class="price">¥<%= data[i].price %></span>&nbsp;<span class="market_price">¥<%= data[i].market_price %></span></p>
+					<p><span class="price">¥ <%= data[i].price %></span> &nbsp; <span class="market_price">¥ <%= data[i].market_price %></span></p>
 				</div>
 				<div class="count">
 					<div class="minus"></div>
