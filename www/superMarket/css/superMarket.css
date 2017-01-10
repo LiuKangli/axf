@@ -211,7 +211,7 @@ header{
 .goodsImg{
 	width: 3rem;
 	height: 3rem;
-	background: red;
+	/*background: red;*/
 	/*background: url(../img/2.png) no-repeat;
 	background-size: cover;*/
 }
