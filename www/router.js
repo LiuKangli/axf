@@ -29,7 +29,7 @@ define(['underscore','backbone'],function(_,backbone){
 			})
 		},
 		mySelf:function(){
-			require(['text!myself/myself.html','myself/js/myself'],function(myself,myselfJs){
+			require(['text!myself/myself.html','myself/js/myself'],function(myself){
 				$('#content').html(myself);
 			});
 		},
@@ -46,6 +46,6 @@ define(['underscore','backbone'],function(_,backbone){
 	});
 	var w = new router();
 	backbone.history.start();
-	
+
 
 });

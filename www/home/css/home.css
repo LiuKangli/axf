@@ -10,8 +10,11 @@ nav{
 }
 nav .ewm{
 	width: 20%;
-	height: 100%;
+	height: 50%;
+	margin-top: 0.3125rem;
 	float: left;
+	background: url(../img/sao.png)no-repeat center center;
+	background-size: contain;
 }
 nav .address{
 	width: 60%;
@@ -56,7 +59,7 @@ nav .search span img{
 	left: 0;
 	bottom: 0;
 	overflow: auto;
-	/*margin-top:1.25rem;*/
+	background-color:rgba(235, 235, 235, 0.35);
 }
 .swiper-container{
 	width: 100%;
@@ -145,14 +148,21 @@ nav .search span img{
 	background: url(../img/201609241914489.jpg@90Q.jpg)no-repeat center center;
 	background-size: contain;
 }
+.lists{
+	width: 100%;
+	overflow: hidden;
+}
+.lists li:nth-child(1){
+	margin-top: 0.234375rem;
+}
 .milk{
 	width: 97%;
-	padding: 0.15625rem;
 }
 .top{
 	width: 100%;
 	height: 0.625rem;
 	background-color: #fff;
+	padding: 0.15625rem 0.15625rem 0.15625rem 0;
 }
 .top i:before{
 	content: '';
@@ -171,6 +181,7 @@ nav .search span img{
 	font-weight: 300;
 	font-size: 0.46875rem;
 	color: mediumpurple;
+	text-align: left;
 }
 .top span{
 	float: right;
@@ -182,21 +193,35 @@ nav .search span img{
 }
 .milk img{
 	width: 100%;
+	position: relative;
+	transition: all .3s 0 ease;
+	z-index: 100;
+}
+.milk .copyImg{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-radius: 50%;
+	/*border: 1px solid red;*/
 }
 .milks{
 	width: 100%;
-	display: flex;
-	justify-content: space-around;
 	background-color: #fff;
 }
-.milks .milk1{
+.milks ul{
+	display: flex;
+	justify-content: space-around;
+}
+.milks li{
 	box-sizing: border-box;
 	position: relative;
+	padding-bottom: 0.078125rem;
 }
-.milks .milk1:nth-child(2){
+.milks li:nth-child(2){
 	border-left: 1px solid #ccc;
 }
-.milks .milk1:nth-child(3){
+.milks li:nth-child(3){
 	border-left: 1px solid #ccc;
 }
  .milk1 img{
@@ -205,6 +230,7 @@ nav .search span img{
  }
  .milk1 p{
  	text-indent: 0.15625rem;
+ 	text-align: left;
  }
  .milk1 .name{
  	font-size: 0.3125rem;
@@ -221,16 +247,16 @@ nav .search span img{
  .milk1 .addToCar{
  	width: 0.625rem;
  	height: 0.625rem;
- 	border: 1px solid #777;
+ 	border: 1px solid orange;
  	border-radius: 50%;
  	position: absolute;
- 	bottom: 0;
+ 	bottom: 0.078125rem;
  	right: 0.3125rem;
  	font-size: 0.625rem;
  	text-align: center;
  	line-height:0.625rem;
  	color: red;
- 	border-color: #eee;
+
  }
 .fruit{
 	margin-top: 0.3125rem;

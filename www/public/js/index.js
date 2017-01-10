@@ -1,9 +1,13 @@
-
+(function(){
+	sessionStorage.setItem('count',0);
+	$('.allNum').text(0);
+	console.log('haha',$('.allNum').text());
+})();
 	$('#foot').on('click','li',function(){
 	console.log($(this).index());
 	defaultImg($(this).index());
 	small($(this).index());
-	
+
 });
 function defaultImg(num){
 	for(var i = 0;i<5; i++){
@@ -23,6 +27,7 @@ function small(i) {
 		}, 100);
 }
 
+//sessionStorage.setItem('count',count);
 $('#content').on('click','#superMarket',function(){
 	console.log('全局购物车触发');
 //	var count = localStorage.getItem('count');
@@ -35,5 +40,4 @@ $('#content').on('click','#superMarket',function(){
 	}
 	$('.allNum').text(count);
 });
-
 

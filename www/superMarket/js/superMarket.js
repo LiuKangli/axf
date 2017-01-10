@@ -89,9 +89,11 @@ define([],function(){
 		$('.unfold').hide();
 	});
 
-	var count = sessionStorage.getItem('count');
+//	var count = 0;
 	// 增加商品数量,添加到购物车中
 	$('#content').on('click','.plus',function(){
+		// lkl 
+		var count = sessionStorage.getItem('count');
 		var num = $(this).prev().text();
 //		e.stopPropagation();
 		$(this).siblings().show();
@@ -155,13 +157,15 @@ define([],function(){
 		
 		
 		// 把物品数量增加显示在下方的购物车中
-		count++;
 		console.log(count);
+		count++;
+		
 //		localStorage.setItem('count',count);
 		sessionStorage.setItem('count',count);
 		
 	});
 	$('#content').on('click','.minus',function(){
+		var count = sessionStorage.getItem('count');
 		var num = $(this).next().text();
 //		e.stopPropagation();
 		num--;

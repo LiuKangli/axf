@@ -15,8 +15,7 @@ var obj = {
 			"are":"曼哈顿",
 			"address":"第五大街"
 		}
-	}
-
+}
 localStorage.setItem("user",JSON.stringify(obj));
 
 
