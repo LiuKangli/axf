@@ -215,6 +215,10 @@ header{
 	/*background: url(../img/2.png) no-repeat;
 	background-size: cover;*/
 }
+.flyer-img{
+	width: 3rem;
+	height: 3rem;
+}
 .copyImg{
 	position: absolute;
 	z-index: 1000;

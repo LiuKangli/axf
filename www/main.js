@@ -7,9 +7,10 @@ require.config({
 		'router':'./router',
 		'text':'public/lib/text',
 		'swiper':'public/lib/swiper-3.4.1.min',
-		'template':'public/lib/template'
+		'template':'public/lib/template',
+		'fly':'public/lib/jquery.fly.min'
 	}
 });
-require(['jquery','flexible','router','text','template'],function($){
+require(['jquery','flexible','router','text','template','fly'],function($){
 	
 });

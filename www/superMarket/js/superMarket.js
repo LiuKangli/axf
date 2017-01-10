@@ -95,10 +95,10 @@ define([],function(){
 		$('.unfold').hide();
 	});
 
-<<<<<<< HEAD
-=======
+
+
 //	var count = 0;
->>>>>>> db76449ae4971d3958cc04e781e3123d3c5aca8e
+
 	// 增加商品数量,添加到购物车中
 	$('#content').on('click','.plus',function(){
 		// lkl 
@@ -109,71 +109,69 @@ define([],function(){
 		num++;
 		$(this).prev().text(num);
 		console.log('增加数量');
-		// 点击添加购物车动画效果
-		var imgUrl = $(this).parent().parent().children('img').attr('src');
-
-		var copyImg = '<img class="copyImg" src='+imgUrl+' />';
-
-		$(this).parent().parent().prepend(copyImg);
-		// 路径动画效果
-		$('.copyImg').animate({
-			width:'2.5rem',
-			height:'2.5rem',
-			top:'-0.5rem',
-			left:'1.5rem',
-			opacity:0.8
-		},100);
-		$('.copyImg').css('transform','rotate(5deg)');
-		$('.copyImg').animate({
-			width:'2rem',
-			height:'2rem',
-			top:'1rem',
-			left:'2.5rem',
-			opacity:0.6
-		},100);
-		$('.copyImg').css('transform','rotate(15deg)');
-		$('.copyImg').animate({
-			width:'1.5rem',
-			height:'1.5rem',
-			top:'2rem',
-			left:'3.5rem',
-			opacity:0.4
-		},100);
-		$('.copyImg').css('transform','rotate(30deg)');
-		$('.copyImg').animate({
-			width:'1rem',
-			height:'1rem',
-			top:'6rem',
-			left:'4rem',
-			opacity:0.2
-		},100);
+//		// 点击添加购物车动画效果
+//		var imgUrl = $(this).parent().parent().children('img').attr('src');
+//		var copyImg = '<img class="copyImg" src='+imgUrl+' />';
+//
+//		$(this).parent().parent().prepend(copyImg);
+//		// 路径动画效果
+//		$('.copyImg').animate({
+//			width:'2.5rem',
+//			height:'2.5rem',
+//			top:'-0.5rem',
+//			left:'1.5rem',
+//			opacity:0.8
+//		},100);
+//		$('.copyImg').css('transform','rotate(5deg)');
+//		$('.copyImg').animate({
+//			width:'2rem',
+//			height:'2rem',
+//			top:'1rem',
+//			left:'2.5rem',
+//			opacity:0.6
+//		},100);
+//		$('.copyImg').css('transform','rotate(15deg)');
+//		$('.copyImg').animate({
+//			width:'1.5rem',
+//			height:'1.5rem',
+//			top:'2rem',
+//			left:'3.5rem',
+//			opacity:0.4
+//		},100);
+//		$('.copyImg').css('transform','rotate(30deg)');
+//		$('.copyImg').animate({
+//			width:'1rem',
+//			height:'1rem',
+//			top:'6rem',
+//			left:'4rem',
+//			opacity:0.2
+//		},100);
 //		$('.copyImg').css('transform','rotate(90deg)');
 //		 $('.copyImg').rotate({
 //              angle: 0,
 //              animateTo: 180,
 //              easing: $.easing.easeInOutExpo
 //          });
-		var $this = $(this);
-		var st = setTimeout(function(){
-//			console.log($this.parent().parent().children('img'));
-			// 1s后清除复制图片
-			$this.parent().parent().children('.copyImg').remove();
-			// 清除定时器
-			clearTimeout(st);
-		},400);
+//		var $this = $(this);
+//		var st = setTimeout(function(){
+////			console.log($this.parent().parent().children('img'));
+//			// 1s后清除复制图片
+//			$this.parent().parent().children('.copyImg').remove();
+//			// 清除定时器
+//			clearTimeout(st);
+//		},400);
 		
 		
 		// 把物品数量增加显示在下方的购物车中
-<<<<<<< HEAD
+
 		count = sessionStorage.getItem('count');
 		count++;
-=======
->>>>>>> db76449ae4971d3958cc04e781e3123d3c5aca8e
+
 		console.log(count);
 		count++;
 		
 //		localStorage.setItem('count',count);
-		sessionStorage.setItem('count',count);
+		sessionStorage.setItem('count',count);console.log(count);
 		
 	});
 	$('#content').on('click','.minus',function(){
@@ -192,6 +190,29 @@ define([],function(){
 //		localStorage.setItem('count',count);
 		sessionStorage.setItem('count',count);
 	});
+	
+	// 添加购物车动画效果
+	$(function() {   console.log(1);
+    var offset = $("#content").offset();   
+    $("#content").on('click','.plus',function(event) {  console.log(event.pageX,event.pageY); 
+        var img = $(this).parent().parent().children('img').attr('src'); //获取当前点击图片链接   
+        var flyer = $('<img class="flyer-img" src="' + img + '">'); //抛物体对象   
+        flyer.fly({
+            start: {   
+                left: event.pageX-200,//抛物体起点横坐标   
+                top: event.pageY //抛物体起点纵坐标   
+            },   
+            end: {   
+                left: offset.left + 180,//抛物体终点横坐标   
+                top: offset.top + 420, //抛物体终点纵坐标   
+            },   
+            onEnd: function() {  console.log(this);
+                $("#tip").show().animate({width: '20px'},300).fadeOut(500);////成功加入购物车动画效果   
+                this.destroy(); //销毁抛物体   
+            }   
+        });   
+    });   
+});  
 	
 
 	

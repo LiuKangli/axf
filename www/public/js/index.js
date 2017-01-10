@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 console.log(JSON.parse(localStorage.getItem('user')));
 if(JSON.parse(localStorage.getItem('user')) == undefined){
 	console.log('user');
@@ -24,11 +24,12 @@ var obj = {}
 
 
 
+
 $('#foot').on('click','li',function(){
 defaultImg($(this).index());
 small($(this).index());
 	
-=======
+
 (function(){
 	sessionStorage.setItem('count',0);
 	$('.allNum').text(0);
@@ -39,7 +40,7 @@ small($(this).index());
 	defaultImg($(this).index());
 	small($(this).index());
 
->>>>>>> db76449ae4971d3958cc04e781e3123d3c5aca8e
+
 });
 function defaultImg(num){
 	for(var i = 0;i<5; i++){
