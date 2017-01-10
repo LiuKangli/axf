@@ -1,4 +1,4 @@
-console.log(sessionStorage.getItem('type'));
+//console.log(sessionStorage.getItem('type'));
 (function(){
 	
 	if (sessionStorage.getItem('type')) {
@@ -10,4 +10,4 @@ console.log(sessionStorage.getItem('type'));
 })();
 $('.btns ').on('click','li',function(){
 		$('.btns li').eq($(this).index()).css('borderBottom','2px solid yellow').siblings().css('borderBottom','none');
-})
+});

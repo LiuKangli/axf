@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //if(!JSON.parse(localStorage.getItem('user'))){
 //	console.log(1);
 //	
@@ -35,6 +36,27 @@ for(var i in loadUser){
 	createList(i, newUser.name, newUser.sex, newUser.phone, newUser.city, newUser.are, newUser.address);
 }
 
+=======
+var obj = {
+		"0":{
+			"name":"米米米米米",
+			"sex":1,
+			"phone":15899979800,
+			"city":'深圳',
+			"are":'宝安28区',
+			"address":"德冠庭"
+		},
+		"1":{
+			"name":"开开开开开",
+			"sex":0,
+			"phone":12345123450,
+			"city":"纽约",
+			"are":"曼哈顿",
+			"address":"第五大街"
+		}
+}
+localStorage.setItem("user",JSON.stringify(obj));
+>>>>>>> db76449ae4971d3958cc04e781e3123d3c5aca8e
 
 
 // 点击保存
