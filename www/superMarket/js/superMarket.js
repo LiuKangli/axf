@@ -2,6 +2,7 @@ define([],function(){
 	// 如果本地没有存储数据,则默认加载'热销榜'
 	if(!localStorage.getItem('superMarketList')){
 		getGoods('热销榜');
+		console.log('热销榜');
 	}
 	
 	$('#content').on('click','.headRight',function(){
@@ -9,9 +10,13 @@ define([],function(){
 	});
 	
 	function request(){
-		// 获得本地存储数据并加载
+		getGoods('热销榜');
 		var category = localStorage.getItem('superMarketList');
-		getGoods(category);
+		if(category){
+			// 获得本地存储数据并加载
+			getGoods(category);
+		}
+		
 //		console.log(category);
 		var index = localStorage.getItem('li-index');
 //		console.log(index);
@@ -23,6 +28,7 @@ define([],function(){
 			// 给左侧导航黄条
 			$(this).addClass('active').siblings().removeClass('active');
 			var category = $(this).text();
+			console.log(category);
 			getGoods(category);
 			localStorage.setItem('li-index',$(this).index());
 			localStorage.setItem('superMarketList',category);
@@ -89,7 +95,6 @@ define([],function(){
 		$('.unfold').hide();
 	});
 
-	var count = sessionStorage.getItem('count');
 	// 增加商品数量,添加到购物车中
 	$('#content').on('click','.plus',function(){
 		var num = $(this).prev().text();
@@ -104,8 +109,6 @@ define([],function(){
 		var copyImg = '<img class="copyImg" src='+imgUrl+' />';
 
 		$(this).parent().parent().prepend(copyImg);
-//		// 给复制图片添加类名达到动画效果
-//		$(this).parent().parent().children('.copyImg').addClass('copyImgGo');
 		// 路径动画效果
 		$('.copyImg').animate({
 			width:'2.5rem',
@@ -155,6 +158,7 @@ define([],function(){
 		
 		
 		// 把物品数量增加显示在下方的购物车中
+		count = sessionStorage.getItem('count');
 		count++;
 		console.log(count);
 //		localStorage.setItem('count',count);
@@ -171,18 +175,13 @@ define([],function(){
 		$(this).next().text(num);
 		
 		// 把物品数量增加显示在下方的购物车中
+		count = sessionStorage.getItem('count');
 		count--;
 //		localStorage.setItem('count',count);
 		sessionStorage.setItem('count',count);
-		
 	});
 	
-	
-	
-	
-	
-		
-	
+
 	
 	return {
 		request : request

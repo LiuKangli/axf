@@ -15,7 +15,7 @@ define([],function(){
 			}
 			
 //			console.log(allPrice);
-			$('.allPrice').text(allPrice);
+			$('.allPrice').text(allPrice.toFixed(1));
 			if(allPrice == 0){
 				$('.decide').css('backgroundColor','#999');
 			}else{
@@ -63,10 +63,10 @@ define([],function(){
 		
 		// 获取当前时间,设置收货时间选项
 		var time = new Date();
-		console.log(time.getHours());
+//		console.log(time.getHours());
 		var hours = time.getHours();
 		var t = 20 - hours;
-		console.log(t);
+//		console.log(t);
 		// 0点至19点
 		if(t<=11 && t>1){
 			$('.today').children().eq(11-t).prevAll().hide();
@@ -141,11 +141,11 @@ define([],function(){
 		getCarInfo();
 		function getCarInfo(){
 				var index = localStorage.getItem('index');
-//			if(!index){
-//				index = 0;
-//			}
+			if(!index){
+				index = 0;
+			}
 				// 获取值赋给列表
-				console.log(index);
+//				console.log(index);
 				var newData = localStorage.getItem("user");
 				var newUser = JSON.parse(newData)[index];
 				console.log(newUser.name);

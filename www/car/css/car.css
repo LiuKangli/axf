@@ -24,6 +24,7 @@
 	margin-top: 0.2rem;
 	background: url(../img/1.png) no-repeat left;
 	background-size: contain;
+	visibility: hidden;
 }
 
 
