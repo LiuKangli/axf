@@ -197,13 +197,12 @@ nav .search span img{
 	transition: all .3s 0 ease;
 	z-index: 100;
 }
-.milk .copyImg{
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 100;
+ .flyer-img{
+ 	position: relative;
+ 	z-index: 1000;
+	width: 2rem;
+	height:2rem;
 	border-radius: 50%;
-	/*border: 1px solid red;*/
 }
 .milks{
 	width: 100%;

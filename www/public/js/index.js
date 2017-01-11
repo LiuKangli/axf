@@ -1,4 +1,3 @@
-console.log(JSON.parse(localStorage.getItem('user')));
 if(JSON.parse(localStorage.getItem('user')) == undefined) {
 	console.log('user');
 	var obj = {}
@@ -21,14 +20,15 @@ if(JSON.parse(localStorage.getItem('user')) == undefined) {
 	localStorage.setItem("user", JSON.stringify(obj));
 }
 
-		(function() {
-			sessionStorage.setItem('count', 0);
-		})(); 
-		$('#foot').on('click', 'li', function() {
-			console.log($(this).index());
-			defaultImg($(this).index());
-			small($(this).index());
-		});
+(function() {
+	sessionStorage.setItem('count', 0);
+})();
+
+$('#foot').on('click','li',function(){
+		var index = $(this).index();
+			defaultImg(index);
+			small(index);
+});
 
 		function defaultImg(num) {
 			for(var i = 0; i < 5; i++) {
@@ -50,16 +50,29 @@ if(JSON.parse(localStorage.getItem('user')) == undefined) {
 		}
 
 		//sessionStorage.setItem('count',count);
-		$('#content').on('click','#superMarket .count',function(){
+
+		$('#content').on('click', '#superMarket .count', function() {
 			console.log('全局购物车触发');
-		//	var count = localStorage.getItem('count');
+			//	var count = localStorage.getItem('count');
 			var count = sessionStorage.getItem('count');
-			console.log(count);
-			if(count==0){
+		
+			if(count == 0) {
 				$('.allNum').hide();
-			}else if(count>0){
+			} else if(count > 0) {
 				$('.allNum').show();
 			}
 			$('.allNum').text(count);
 		});
-		
+
+		$('#content').on('click', '#superMarket', function() {
+			console.log('全局购物车触发');
+			//	var count = localStorage.getItem('count');
+			var count = sessionStorage.getItem('count');
+			console.log(count);
+			if(count == 0) {
+				$('.allNum').hide();
+			} else if(count > 0) {
+				$('.allNum').show();
+			}
+			$('.allNum').text(count);
+		});

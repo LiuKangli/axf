@@ -1,3 +1,8 @@
+<?php
+require_once("jssdk.php");
+$jssdk = new jssdk("wx38d277f6e689befc", "01e98b0fe2336551a523fffb7955d38a");
+$signPackage = $jssdk->GetSignPackage();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/rest.css"/>
 	<link rel="stylesheet" type="text/css" href="public/css/swiper-3.4.1.min.css"/>
 	<link rel="stylesheet" type="text/css" href="public/css/index.css"/>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 	<title>首页</title>
 </head>
 <body>
@@ -71,4 +77,14 @@
 <script src="public/lib/require.js" data-main='main'></script>
 <script src="public/lib/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="public/js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	wx.config({
+			debug: false, 
+		    appId: '<?php echo $signPackage["appId"];?>',
+		    timestamp:'<?php echo $signPackage["timestamp"];?>' , 
+		    nonceStr: '<?php echo $signPackage["nonceStr"];?>', 
+		    signature: '<?php echo $signPackage["signature"];?>',
+		    jsApiList: ['scanQRCode','getLocation','openLocation']
+		});
+</script>
 </html>

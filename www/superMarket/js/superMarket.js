@@ -1,11 +1,4 @@
 
-var obj = {
-	'1':'',
-	'2':'',
-	'3':'',
-	'4':''
-}
-
 define([], function() {
 	function light(){
 		var index = localStorage.getItem('li-index');
@@ -143,8 +136,6 @@ define([], function() {
 		count--;
 		sessionStorage.setItem('count', count);
 	});
-	
-	
 	
 	return {
 		request: request,

@@ -1,29 +1,27 @@
-
 define(['swiper'], function(swiper) {
-	(function(){
-	var count = sessionStorage.getItem('count');
-	if(count==0){
-				$('.allNum').hide();
-			}else if(count>0){
-				$('.allNum').show();
-			}
-			$('.allNum').text(count);
-})();
-	function animateImg(width,height,top,left,opcity,time){
-		var width = width || 0,
-			height = height || 0 ,
-			top = top || 0 ,
-			left = left || 0,
-			opacity = opcity || 1,
-			time = time || 0;
-		$('.copyImg').animate({
-			'width':width,
-			'height':height,
-			'top':top,
-			'left':left,
-			'opacity':opcity
-		},time);
-	}
+	(function() {
+		var count = sessionStorage.getItem('count');
+		if(count == 0) {
+			$('.allNum').hide();
+		} else if(count > 0) {
+			$('.allNum').show();
+		}
+		$('.allNum').text(count);
+
+//		wx.ready(function() {
+//			wx.checkJsApi({
+//				jsApiList:[
+//				'getLocation'
+//				],
+//				success:function(){
+//					if (res.checkResult.getLocation == false) {
+//						
+//					} 
+//				}
+//			})
+//		})
+
+	})();
 	//获取轮播图和菜单数据
 	function bannerData() {
 		$.ajax({
@@ -39,7 +37,6 @@ define(['swiper'], function(swiper) {
 				}
 				$('#banner').html(html);
 				swiper();
-
 				var menu = JSON.parse(data).data.menu;
 				menue(menu);
 			}
@@ -70,101 +67,78 @@ define(['swiper'], function(swiper) {
 		}
 	});
 	//改变footer下的图标
-	function changeIcon(){
+	function changeIcon() {
 		var data = $('footer li').eq(1).children('a').children('figure').children('img').attr('data-src');
-	var defaul = $('footer li').eq(0).children('a').children('figure').children('img').attr('default');
-	$('footer li').eq(0).children('a').children('figure').children('img').attr('src',defaul);
-	$('footer li').eq(1).children('a').children('figure').children('img').attr('src',data);
-	$('footer li').eq(1).children('a').children('figure').children('img').css('transform', 'scale(1.2,1.2)');
+		var defaul = $('footer li').eq(0).children('a').children('figure').children('img').attr('default');
+		$('footer li').eq(0).children('a').children('figure').children('img').attr('src', defaul);
+		$('footer li').eq(1).children('a').children('figure').children('img').attr('src', data);
+		$('footer li').eq(1).children('a').children('figure').children('img').css('transform', 'scale(1.2,1.2)');
 		setTimeout(function() {
 			$('footer li').eq(1).children('a').children('figure').children('img').css('transform', 'scale(1,1)');
 		}, 100);
 	}
-	function animateForaddToCar(ele){
+
+	function animateForaddToCar(ele) {
 		$(this).css({
-			transform:'translate(3,-5)'
+			transform: 'translate(3,-5)'
 		})
 	}
 	//更多
-	$('#content').on('click','.milk .top .more',function(){
-	location.hash='superMarket';
+	$('#content').on('click', '.milk .top .more', function() {
+		location.hash = 'superMarket';
 		changeIcon();
 	});
 	//添加到购物车
-	$('#content').on('click','.addToCar ',function(){
-//		console.log($(this).siblings('img'));
-		var copyImg = '<img class="copyImg" src='+$(this).siblings('img').attr('src')+' />';
-		$(this).parent().append(copyImg);
-		animateImg('50px','50px','150px','55px',0.8,10);
-		animateImg('50%','50%','150px','45px',0.6,100);
-		animateImg('30%','30%','160px','35px',0.4,10);
-		animateImg('10%','10%','165px','55px',0.2,10);
-	var time = setTimeout(function(){
-		$('.copyImg').remove();
-		clearTimeout(time);
-	},700);
-		
-			var count = sessionStorage.getItem('count');
-			count++;
-			if(count==0){
-				$('.allNum').hide();
-			}else if(count>0){
-				$('.allNum').show();
-			}
-			$('.allNum').text(count);
-			
-			sessionStorage.setItem('count',count);
+	var offset = $("#content").offset(); 
+	$('#content').on('click', '.addToCar ', function(event) {
+       	 var img = $(this).siblings('img').attr('src'); //获取当前点击图片链接   
+        	var flyer = $('<img class="flyer-img" src="' + img + '">'); //抛物体对象   
+       	 flyer.fly({   
+            start: {   
+                left: event.pageX-85,//抛物体起点横坐标   
+                top: event.pageY-100 //抛物体起点纵坐标   
+            },   
+            end: {   
+                left: offset.left +240,//抛物体终点横坐标   
+                top: offset.top + 530, //抛物体终点纵坐标   
+            },   
+            onEnd: function() {   
+                $("#tip").show().animate({width: '200px'},300).fadeOut(500);////成功加入购物车动画效果   
+                this.destroy(); //销毁抛物体   
+            }   
+        });   
+       
+		var count = sessionStorage.getItem('count');
+		count++;
+		if(count == 0) {
+			$('.allNum').hide();
+		} else if(count > 0) {
+			$('.allNum').show();
+		}
+		$('.allNum').text(count);
+
+		sessionStorage.setItem('count', count);
 	});
-	
+
 	//搜索
 	$('#content ').on('click', '.search span', function() {
 		location.href = 'home/search/search.html';
 	});
-	//二维码
-	$('#content').on('click','.ewm',function(){
-		fun();
-	});
-	//微信
-//	wx.config({
-//		debug: true,
-//		appId: '<?php echo $signPackage["appId"];?>',
-//		timestamp: '<?php echo $signPackage["timestamp"];?>',
-//		nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-//		signature: '<?php echo $signPackage["signature"];?>',
-//		jsApiList: ['scanQRCode', 'getLocation', 'openLocation']
-//	});
 
-//	function fun() {
-//		wx.scanQRCode({
-//			needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-//			scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-//			success: function(res) {
-//				var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-//			}
-//		});
-//	}
-//
-//	function map() {
-//		wx.getLocation({
-//			type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
-//			success: function(res) {
-//				var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
-//				var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
-//				var speed = res.speed; // 速度，以米/每秒计
-//				var accuracy = res.accuracy; // 位置精度  
-//
-//				wx.openLocation({
-//					latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
-//					longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
-//					name: '深圳', // 位置名
-//					address: '金悦保健', // 地址详情说明
-//					scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
-//					infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
-//				});
-//			}
-//		});
-//	}
-	return {
-		bannerData: bannerData
-	}
+	//	//微信
+		
+	//二维码
+	$('#content').on('click', '.ewm', function() {
+			wx.scanQRCode({
+			    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+			    scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+			    success: function (res) {
+				    var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+				}
+	});
+});
+	
+return {
+	bannerData: bannerData
+}
 });
