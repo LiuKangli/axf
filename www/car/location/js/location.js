@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //if(!JSON.parse(localStorage.getItem('user'))){
 //	console.log(1);
 //	
@@ -36,7 +36,7 @@ for(var i in loadUser){
 	createList(i, newUser.name, newUser.sex, newUser.phone, newUser.city, newUser.are, newUser.address);
 }
 
-=======
+
 var obj = {
 		"0":{
 			"name":"米米米米米",
@@ -56,7 +56,7 @@ var obj = {
 		}
 }
 localStorage.setItem("user",JSON.stringify(obj));
->>>>>>> db76449ae4971d3958cc04e781e3123d3c5aca8e
+
 
 
 // 点击保存
