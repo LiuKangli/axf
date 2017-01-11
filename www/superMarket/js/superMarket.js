@@ -1,10 +1,17 @@
-(function(){
-		var index = localStorage.getItem('li-index');
-		console.log($('#content #left .leftUl li'));
-		$('.leftUl li').eq(index).addClass('active').siblings().removeClass('active');
-	})();
+
+var obj = {
+	'1':'',
+	'2':'',
+	'3':'',
+	'4':''
+}
+
 define([], function() {
-	console.log(localStorage.getItem('superMarketList'));
+	function light(){
+		var index = localStorage.getItem('li-index');
+		console.log(index);
+		$('.leftUl li').eq(index).addClass('active').siblings().removeClass('active');
+	}
 	// 如果本地没有存储数据,则默认加载'热销榜'
 	if(localStorage.getItem('superMarketList')==false) {
 		getGoods('热销榜');
@@ -140,14 +147,8 @@ define([], function() {
 	
 	
 	return {
-		request: request
+		request: request,
+		light : light
 	}
 	
 });
-console.log($('.allNum'));
-
-(function(){
-		var index = localStorage.getItem('li-index');
-		console.log($('#content #left .leftUl li'));
-		$('.leftUl li').eq(index).addClass('active').siblings().removeClass('active');
-	})();
